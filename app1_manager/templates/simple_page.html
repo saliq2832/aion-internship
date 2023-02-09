@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Design</title>
+  </head>
+  <body>
+    <h1>Design</h1>
+    <form action="{% url 'simple_page' %}" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required><br><br>
+      <label for="image">Image:</label>
+      <input type="file" id="image" name="image" required><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>
